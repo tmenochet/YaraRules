@@ -7,5 +7,6 @@ rule XorPacker
         $s_go = "go.buildid" ascii nocase
         $s_bf_xor = "main.bf_xor" ascii nocase
     condition:
+        uint16(0) == 0x5a4d and
         all of them
 }
